@@ -83,6 +83,12 @@ def open_Port_Finder(ip='127.0.0.1',port=21):
     
     return pg
 
+def s_Restart():
+    print("Error RESTART !!!!")
+    sleep(2)
+    os.system('python.exe po_fi.py' if os.name == 'nt' else 'python3 po_fi.py')
+
+
 # MAIN ###########################
 if os.name=='nt':
     os.system('echo off')
@@ -175,9 +181,11 @@ elif _iporfile == '2':
     except:
         print(importfiletxt)
         print("ERORR => can't find file")
-        _ip = input("IP or WEBSITE URL > ")
+        #
+        s_Restart()
     try:
         all_ips=importfile.readlines()
+        print(all_ips)
         importfile.close()
 
     except:
@@ -191,6 +199,8 @@ elif _iporfile == '2':
 else:
     print("ERORR => default mode enter a ip")
     _iporfile = '1'
+    _ip = input("IP or WEBSITE URL > ")
+
 
 # end $ip input manually or file$
 
@@ -204,8 +214,9 @@ if _mode=='1':
         _portmax = int(input("(max) > "))
     except:
         print("ERORR just enter number")
-        _portmin = 80
-        _portmax = 80
+        # _portmin = 80
+        # _portmax = 80
+        s_Restart()
 
     if _portmin>_portmax:
         temp = _portmax
@@ -217,8 +228,9 @@ elif _mode=='2':
     _portmax = 9999
 else:
     print("ERORR")
-    _portmin = 80
-    _portmax = 80
+    # _portmin = 80
+    # _portmax = 80
+    s_Restart()
 
 # end $mode$
 
