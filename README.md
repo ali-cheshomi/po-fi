@@ -25,7 +25,8 @@ python 3 => [Download](https://www.python.org/downloads/)
 for file import mode you must create a text file and each line of the file must be an ip
 
 example:
-```192.168.1.1
+```
+192.168.1.1
 32.1.41.45
 www.mrac.com
 ```
