@@ -23,8 +23,10 @@ python 3 => [Download](https://www.python.org/downloads/)
 
 #ips.txt
 for file import mode you must create a text file and each line of the file must be an ip
+
+example:
 ```
-    example:
+
 
           192.168.1.1
           132.1.41.45
